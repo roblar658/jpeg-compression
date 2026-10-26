@@ -1,3 +1,16 @@
+
+# Hvordan kjøre scriptet
+
+## Kjør alle enhetstester (11/11 OK):
+python C:/dev/jpeg.py --test
+
+## Generer alle 10 plott for et bilde:
+python C:/dev/jpeg.py --plot C:/dev/bilde.jpg --quality 50 --outdir C:/dev/jpeg_plots
+
+## Kjør full demonstrasjon (både tester og plott):
+python C:/dev/jpeg.py --demo
+
+
 <img width="3600" height="1900" alt="00_jpeg_full_pipeline_overview" src="https://github.com/user-attachments/assets/e858bb5e-755e-48be-b208-226575937139" />
 <img width="3000" height="1500" alt="01_color_space_conversion" src="https://github.com/user-attachments/assets/b13ed210-d27f-4f16-955d-f66225e4b0d8" />
 <img width="2600" height="1200" alt="02_block_partition_8x8" src="https://github.com/user-attachments/assets/a2423903-0155-4cbd-8552-8e64b5b0be18" />
