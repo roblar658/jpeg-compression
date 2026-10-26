@@ -1648,7 +1648,14 @@ def generate_all_plots(image_or_path=None, output_dir: str = "C:/dev/jpeg_plots"
     saved_files.append(p0)
     print("  [10/10] Lagret 00_jpeg_full_pipeline_overview.png")
 
-    print("\nAlle 10 pedagogiske plott er generert og lagret!")
+    # Lagre selve den komprimerte JPEG-filen
+    comp_file = os.path.join(output_dir, f"komprimert_q{quality}.jpg")
+    image.save(comp_file, quality=quality)
+    saved_files.append(comp_file)
+    comp_size_kb = os.path.getsize(comp_file) / 1024.0
+    print(f"  [JPEG-fil] Lagret selve den komprimerte filen: {comp_file} ({comp_size_kb:.1f} KB)")
+
+    print("\nAlle 10 pedagogiske plott samt komprimert JPEG-fil er lagret i: " + output_dir)
     return saved_files
 
 
@@ -1831,9 +1838,34 @@ def main():
                         help="Mappe for lagring av plott (standard: C:/dev/jpeg_plots)")
     parser.add_argument("--block-y", type=int, default=None, help="Y-indeks for 8x8 blokk")
     parser.add_argument("--block-x", type=int, default=None, help="X-indeks for 8x8 blokk")
+    parser.add_argument("--compress", "-c", type=str, default=None,
+                        help="Komprimer en bildefil direkte til JPEG (f.eks. --compress bilde.png --output ut.jpg)")
+    parser.add_argument("--decompress", "-d", type=str, default=None,
+                        help="Dekomprimer en JPEG-fil direkte til bilde (f.eks. --decompress ut.jpg --output gjenopprettet.png)")
+    parser.add_argument("--output", "-O", type=str, default=None,
+                        help="Utdata-filbane for komprimert/dekomprimert fil")
     parser.add_argument("--demo", action="store_true", help="Kjør både tester og generer alle demonstrasjonsplott")
 
     args = parser.parse_args()
+
+    # Direkte komprimering
+    if args.compress:
+        img = JPEGImage.from_file(args.compress)
+        out_path = args.output if args.output else os.path.splitext(args.compress)[0] + "_komprimert.jpg"
+        img.save(out_path, quality=args.quality)
+        size_kb = os.path.getsize(out_path) / 1024.0
+        print(f"Komprimert bilde lagret til: {out_path} ({size_kb:.1f} KB, Q={args.quality})")
+        return
+
+    # Direkte dekomprimering
+    if args.decompress:
+        with open(args.decompress, "rb") as f:
+            raw_bytes = f.read()
+        dec_img = decompress(raw_bytes)
+        out_path = args.output if args.output else os.path.splitext(args.decompress)[0] + "_dekomprimert.png"
+        dec_img.to_pil().save(out_path)
+        print(f"Dekomprimert bilde lagret til: {out_path} ({dec_img.width}x{dec_img.height})")
+        return
 
     # Hvis ingen argumenter er gitt, eller --test/--demo
     if len(sys.argv) == 1 or args.test or args.demo:

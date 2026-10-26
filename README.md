@@ -61,18 +61,30 @@ pip install matplotlib numpy pillow
 python jpeg.py --test
 ```
 
-### 2. Generer alle 10 steg-plott for et bilde
+### 2. Komprimer et bilde direkte til en .jpg-fil
 ```bash
-# Bruker standardbilde eller oppgitt bildefil med ønsket kvalitet (1-100)
+# Komprimerer et bilde (PNG, JPG, BMP) til ekte JFIF JPEG med ønsket kvalitet (standard: 50)
+python jpeg.py --compress bilde.jpg --output komprimert.jpg --quality 75
+```
+
+### 3. Dekomprimer en JPEG-fil tilbake til bilde
+```bash
+# Dekomprimerer en JPEG-fil tilbake til ukomprimert PNG
+python jpeg.py --decompress komprimert.jpg --output dekomprimert.png
+```
+
+### 4. Generer alle 10 pedagogiske plott samt komprimert JPEG
+```bash
+# Genererer alle 10 plott samt lagrer komprimert_q50.jpg i outdir
 python jpeg.py --plot bilde.jpg --quality 50 --outdir plots
 ```
 
-### 3. Kjør full demonstrasjon (tester + generering av alle plott)
+### 5. Kjør full demonstrasjon (tester + generering av alle plott)
 ```bash
 python jpeg.py --demo
 ```
 
-### 4. Dypdykk i en spesifikk 8x8-blokk
+### 6. Dypdykk i en spesifikk 8x8-blokk
 ```bash
 python jpeg.py --plot bilde.jpg --block-y 20 --block-x 30 --quality 75
 ```
