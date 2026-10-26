@@ -938,9 +938,9 @@ def _style_axes(ax, title=None, xlabel=None, ylabel=None):
     if title:
         ax.set_title(title, fontsize=11, fontweight="bold", pad=8, color="#1e293b")
     if xlabel:
-        ax.set_xlabel(xlabel, fontsize=9, fontweight="medium", color="#475569")
+        ax.set_xlabel(xlabel, fontsize=9, fontweight="normal", color="#475569")
     if ylabel:
-        ax.set_ylabel(ylabel, fontsize=9, fontweight="medium", color="#475569")
+        ax.set_ylabel(ylabel, fontsize=9, fontweight="normal", color="#475569")
     ax.tick_params(colors="#64748b", labelsize=8)
     for spine in ax.spines.values():
         spine.set_color("#cbd5e1")
@@ -1345,7 +1345,7 @@ def plot_07_zigzag_and_rle(quantized_block, zigzag_seq, rle_tokens, save_path: s
              bbox=dict(boxstyle="round,pad=0.6", facecolor="#e2e8f0", edgecolor="#cbd5e1", alpha=0.8),
              va="center", transform=ax3.transAxes)
 
-    plt.tight_layout()
+    fig.subplots_adjust(top=0.91, bottom=0.08, left=0.06, right=0.97, hspace=0.32, wspace=0.25)
     if save_path:
         os.makedirs(os.path.dirname(os.path.abspath(save_path)), exist_ok=True)
         fig.savefig(save_path, dpi=200)
