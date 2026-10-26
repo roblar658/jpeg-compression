@@ -1,12 +1,11 @@
-<img width="1900" height="1900" alt="04_dct_basis_functions" src="https://github.com/user-attachments/assets/8b23a3e2-9a87-4c3b-844c-7d520b52e653" />
-<img width="3200" height="1040" alt="05_dct_coefficients" src="https://github.com/user-attachments/assets/7e4fd267-f684-4c41-b90b-e20ca952dbbc" />
-<img width="3600" height="960" alt="06_quantization_and_sparsity" src="https://github.com/user-attachments/assets/fa0b3f49-6a90-4672-a775-45e508924a55" />
+<img width="3600" height="1900" alt="00_jpeg_full_pipeline_overview" src="https://github.com/user-attachments/assets/e858bb5e-755e-48be-b208-226575937139" />
+<img width="3000" height="1500" alt="01_color_space_conversion" src="https://github.com/user-attachments/assets/b13ed210-d27f-4f16-955d-f66225e4b0d8" />
+<img width="2600" height="1200" alt="02_block_partition_8x8" src="https://github.com/user-attachments/assets/a2423903-0155-4cbd-8552-8e64b5b0be18" />
+<img width="3000" height="1000" alt="03_level_shifting" src="https://github.com/user-attachments/assets/0b854a57-e044-4741-a333-c3a776df34b2" />
+<img width="1900" height="1900" alt="04_dct_basis_functions" src="https://github.com/user-attachments/assets/f2168028-9b50-41f4-93a5-73fc3a844cfd" />
+<img width="3200" height="1040" alt="05_dct_coefficients" src="https://github.com/user-attachments/assets/222d764d-e2c4-4900-ba84-f17ce5e603c7" />
+<img width="3600" height="960" alt="06_quantization_and_sparsity" src="https://github.com/user-attachments/assets/8a93e6fe-1807-43a0-85eb-209e555c789e" />
+<img width="3000" height="1300" alt="07_zigzag_scanning_and_rle" src="https://github.com/user-attachments/assets/d1aae162-15b6-43e0-b167-7cd6a116af77" />
+<img width="3400" height="960" alt="08_inverse_dct_and_error" src="https://github.com/user-attachments/assets/7374c5b4-2b8e-4da9-9dab-1f13e7989823" />
+<img width="3200" height="1500" alt="09_quality_comparison_and_rate_distortion" src="https://github.com/user-attachments/assets/aad4eae7-ae34-4ee2-a50e-41136c165f4d" />
 
-
-<img width="3000" height="1000" alt="03_level_shifting" src="https://github.com/user-attachments/assets/0589d433-56b4-4a33-b9d6-e424a9821668" />
-<img width="2600" height="1200" alt="02_block_partition_8x8" src="https://github.com/user-attachments/assets/00f05a43-7893-405e-b93d-9e8ced825c31" />
-<img width="3000" height="1500" alt="01_color_space_conversion" src="https://github.com/user-attachments/assets/2e9530f3-2f73-4e20-8cd2-54d8d4f1185c" />
-<img width="3600" height="1900" alt="00_jpeg_full_pipeline_overview" src="https://github.com/user-attachments/assets/abce28e9-7df7-439b-be98-88ab2cc4c8eb" />
-<img width="3000" height="1300" alt="07_zigzag_scanning_and_rle" src="https://github.com/user-attachments/assets/fa1f18a1-fd9c-4559-99b5-f109e6f7c557" />
-<img width="3400" height="960" alt="08_inverse_dct_and_error" src="https://github.com/user-attachments/assets/1d2f6f16-9519-4b00-8e47-26cfd2cc0d1a" />
-<img width="3200" height="1500" alt="09_quality_comparison_and_rate_distortion" src="https://github.com/user-attachments/assets/046d5d7a-c937-46fd-b8b4-28a111f159cc" />
