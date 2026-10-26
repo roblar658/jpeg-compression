@@ -1,13 +1,13 @@
 
-# Hvordan kjøre scriptet
+## Hvordan kjøre scriptet
 
-## Kjør alle enhetstester (11/11 OK):
+### Kjør alle enhetstester (11/11 OK):
 python C:/dev/jpeg.py --test
 
-## Generer alle 10 plott for et bilde:
+### Generer alle 10 plott for et bilde:
 python C:/dev/jpeg.py --plot C:/dev/bilde.jpg --quality 50 --outdir C:/dev/jpeg_plots
 
-## Kjør full demonstrasjon (både tester og plott):
+### Kjør full demonstrasjon (både tester og plott):
 python C:/dev/jpeg.py --demo
 
 
